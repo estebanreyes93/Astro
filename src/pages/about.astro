@@ -1,5 +1,14 @@
 ---
 const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Sarha",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["Photography", "Baseball", "Woringout"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
 ---
 
 <html lang="en">
@@ -17,22 +26,25 @@ const pageTitle = "About Me";
     <a href="/blog">Blog</a>
 
     <h1>{pageTitle}</h1>
-    <h2>... and my new site no feik</h2>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-    </p>
-    <p>
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit..."
-    </p>
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>
+        I live in {identity.country} and I work as a {identity.occupation}.
+      </li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            Two of my hobbies are: {identity.hobbies[0]} and{" "}
+            {identity.hobbies[1]}
+          </li>
+        )
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
   </body><footer>
     <h3>ER copyright</h3>
   </footer>
