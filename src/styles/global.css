@@ -1,5 +1,5 @@
 html {
-    background-color: #f1f5f9;
+    background-color: #b5b7b9;
     font-family: sans-serif;
   }
   
@@ -15,19 +15,24 @@ html {
     box-sizing: border-box;
   }
   
-  h1 {
+  h1  {
     margin: 1rem 0;
     font-size: 2.5rem;
+    color: purple;
+    font-size: 4rem;
   }
 
-   h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
+  h2 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: brown;
+  }
+
+
+.skill {
+  color:green ;
+  font-weight: var(--fontWeight);
+  text-transform: var(--textCase);
+  }
 
    

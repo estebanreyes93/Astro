@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 const pageTitle = "Home Page";
 ---
 
@@ -12,11 +14,9 @@ const pageTitle = "Home Page";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/history">History</a>
-    <a href="/blog">Blog</a>
-
+    <!-- menu -->
+    <Navigation />
+    <!-- menu -->
     <h1>Astro</h1>
     <h2>My Astro Site</h2>
     <ul>
@@ -24,9 +24,6 @@ const pageTitle = "Home Page";
       <li><a href="/posts/post-2">Post 2</a></li>
       <li><a href="/posts/post-3">Post 3</a></li>
     </ul>
+    <Footer />
   </body>
-
-  <footer>
-    <h3>ER copyright</h3>
-  </footer>
 </html>

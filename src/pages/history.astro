@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
 const pageTitle = "Our History";
 ---
 
@@ -12,10 +15,9 @@ const pageTitle = "Our History";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/history">History</a>
-    <a href="/blog">Blog</a>
+    <!-- menu -->
+    <Navigation />
+    <!-- menu -->
 
     <h1>What is Lorem Ipsum?</h1>
     <h2>Our history</h2>
@@ -30,5 +32,6 @@ const pageTitle = "Our History";
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
     </p>
+    <Footer />
   </body>
 </html>
