@@ -7,6 +7,7 @@ const identity = {
   country: "Canada",
   occupation: "Technical Writer",
   hobbies: ["Photography", "Baseball", "Woringout"],
+  surnames: ["Puñala", "eteban"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
@@ -26,18 +27,7 @@ const textCase = "uppercase";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style define:vars={{ skillColor, fontWeight, textCase }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
-    </style></head
-  >
+  </head>
 
   <body>
     <a href="/">Home</a>
@@ -48,7 +38,10 @@ const textCase = "uppercase";
     <h1>{pageTitle}</h1>
     <p>Here are a few facts about me:</p>
     <ul>
-      <li>My name is {identity.firstName}.</li>
+      <li>
+        My name is {identity.firstName} also called as
+        {identity.surnames[0]} and {identity.surnames[1]}.
+      </li>
       <li>
         I live in {identity.country} and I work as a {identity.occupation}.
       </li>
