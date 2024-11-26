@@ -1,8 +1,7 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
-const pageTitle = "My Posts";
+const pageTitle = "Blog Title";
 ---
 
 <html lang="en">
@@ -13,16 +12,23 @@ const pageTitle = "My Posts";
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
+
+
   <body>
-    <!-- menu -->
-    <Header />
-    <!-- menu -->
-    <h1>My Astro Site</h1>
-    <h1>My Astro Learning Blog</h1>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
+
+    
+    <BaseLayout pageTitle={pageTitle}>
+      <p>My name is Alfons</p>
+      <container>
+        <ul>
+          <li><a href = "/posts/post-1">My First Blog Post</li> 
+            <li><a href = "/posts/post-2">My Second Blog Post</li>
+              <li><a href = "/posts/post-3">My Third Blog Post</li>
+          
+        </ul></container>
+        
+      </BaseLayout>
+
+  
   </body>
 </html>

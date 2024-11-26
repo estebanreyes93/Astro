@@ -18,18 +18,18 @@ html {
   h1  {
     margin: 1rem 0;
     font-size: 2.5rem;
-    color: #b5b5b5;
+    color: #ffffff;
     font-size: 4rem;
   }
 
   h2 {
     margin: 1rem 0;
     font-size: 2.5rem;
-    color: brown;
+    color: rgb(159, 159, 159);
   }
    
   p {
-    color: rgb(135, 136, 135) ;
+    color: rgb(255, 255, 255) ;
   }
 
   ul > li {
