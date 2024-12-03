@@ -1,38 +1,20 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
 const pageTitle = "History Page";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <!-- menu -->
-    <Header />
-    <!-- menu -->
-
-    <h1>Who i am?</h1>
-    <h2>well..</h2>
-    <p>
-      I’m Esteban, an experienced website developer with expertise in Content
-      Management Systems (CMS) like WordPress and Joomla. I specialize in
-      creating dynamic, user-friendly websites tailored to meet diverse client
-      needs. My skills include eCommerce integration, website optimization, and
-      seamless third-party tool implementation. Dedicated to delivering
-      high-quality web solutions, I ensure every project provides exceptional
-      performance and a superior user experience.
-    </p>
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="text-center">
+    <h2>Who i am?</h2>
+  </div>
+  <p>
+    I’m Esteban, an experienced website developer with expertise in Content
+    Management Systems (CMS) like WordPress and Joomla. I specialize in creating
+    dynamic, user-friendly websites tailored to meet diverse client needs. My
+    skills include eCommerce integration, website optimization, and seamless
+    third-party tool implementation. Dedicated to delivering high-quality web
+    solutions, I ensure every project provides exceptional performance and a
+    superior user experience.
+  </p>
+</BaseLayout>

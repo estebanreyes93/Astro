@@ -4,31 +4,17 @@ import "../styles/global.css";
 const pageTitle = "Blog Title";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-
-
-  <body>
-
-    
-    <BaseLayout pageTitle={pageTitle}>
-      <p>My name is Alfons</p>
-      <container>
-        <ul>
-          <li><a href = "/posts/post-1">My First Blog Post</li> 
-            <li><a href = "/posts/post-2">My Second Blog Post</li>
-              <li><a href = "/posts/post-3">My Third Blog Post</li>
-          
-        </ul></container>
-        
-      </BaseLayout>
-
-  
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <p>My name is Alfonso</p>
+  <container>
+    <ul>
+      <li>
+        <a href="/posts/post-1">My First Blog Post</a>
+        <li>
+          <a href="/posts/post-2">My Second Blog Post</a>
+          <li><a href="/posts/post-3">My Third Blog Post</a></li>
+        </li>
+      </li>
+    </ul>
+  </container>
+</BaseLayout>

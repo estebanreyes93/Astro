@@ -1,7 +1,8 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Inicio";
+import Cards from "../components/Cards.astro";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <hp>My awesome blog subtitle</p>
-</BaseLayout>
+
+<BaseLayout pageTitle={pageTitle} />
+<Cards />

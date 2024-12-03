@@ -2,9 +2,9 @@
 // imports
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 // cons
-const pageTitle = "About Me";
+const pageTitle = "About Me Page";
 const identity = {
   firstName: "Esteban",
   country: "DR",
@@ -20,22 +20,8 @@ const finished = true;
 const goal = 3;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-
-  <body>
-    <!-- menu -->
-    <Header />
-    <!-- menu -->
-
-    <h1>{pageTitle}</h1>
-    <p>Here are a few facts about me:</p>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="font-sans space-y-4 text-xl">
     <ul>
       <li>
         My name is {identity.firstName} also called as
@@ -54,6 +40,8 @@ const goal = 3;
         )
       }
     </ul>
+  </div>
+  <div class="font-sans space-y-4 text-xl">
     <p>My skills are:</p>
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
@@ -68,11 +56,5 @@ const goal = 3;
         <p>My goal is not 3.</p>
       )
     }
-    <Footer />
-
-    
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
+  </div>
+</BaseLayout>
